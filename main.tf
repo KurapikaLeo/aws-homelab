@@ -50,3 +50,43 @@ resource "aws_route_table_association" "subnet_association" {
   route_table_id = aws_route_table.route_table.id
 }
 
+ # Make a security group for windows 10 and kali cloud EC2
+resouce "aws_security_group" "windows_kali_sec_group"{
+  name = "windows_kali"
+  description = "sec group that allows SSH, RDP, ICMP"
+  vpc_id = "${aws_vpc.homelab_vpc.id}"
+
+
+  ingres{
+    from_port = 22
+    destination_port = 22
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingres{
+    from_port = 3389
+    destination_port = 3389
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingres{
+    from_port = -1
+    destination_port = -1
+    protocol = "icmp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  engres{
+    from_port = 0
+    destination_port = 0
+    protocol = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags = {
+    windows and kali sec group
+  }
+
+}
+
