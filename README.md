@@ -15,3 +15,8 @@
 
 ### State what public key was created in EC2 : ``` terraform apply -var="aws-key=name_of_key" ```
 ![image](https://github.com/KurapikaLeo/aws-homelab/assets/101999591/3724d11e-ffa8-4afa-a704-61ac8eece76b)
+
+
+
+## The running EC2 instances 
+![image](https://github.com/KurapikaLeo/aws-homelab/assets/101999591/566e2445-e0af-4f2b-b054-a56ffa1fa290)
