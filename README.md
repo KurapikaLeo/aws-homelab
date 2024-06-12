@@ -18,5 +18,21 @@
 
 
 
-## The running EC2 instances 
+## The running EC2 instances - Kali machine (attacker)
 ![image](https://github.com/KurapikaLeo/aws-homelab/assets/101999591/566e2445-e0af-4f2b-b054-a56ffa1fa290)
+
+### Some commands used during Kali setup: upgrade, update, setup RDP  
+``` echo "[i] Updating and upgrading Kali"
+apt-get update
+apt-get full-upgrade -y
+apt-get install -y kali-desktop-xfce xorg xrdp
+
+echo "[i] Configuring xrdp to listen to port 3389 (but not starting the service)"
+sed -i 's/port=3389/port=3389/g' /etc/xrdp/xrdp.ini
+```
+```
+systemctl enable xrdp --now
+```
+
+![image](https://github.com/KurapikaLeo/aws-homelab/assets/101999591/023670d8-83d8-47d0-b341-26750c97dc1f)
+
