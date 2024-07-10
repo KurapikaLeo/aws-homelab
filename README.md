@@ -36,3 +36,6 @@ systemctl enable xrdp --now
 
 ![image](https://github.com/KurapikaLeo/aws-homelab/assets/101999591/023670d8-83d8-47d0-b341-26750c97dc1f)
 
+
+![image](https://github.com/KurapikaLeo/aws-homelab/assets/101999591/b9d27da2-b7c6-4e12-8abf-ae01103da462)
+
